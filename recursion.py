@@ -54,10 +54,24 @@ countup(5)
 """5]Write a recursive function that takes a string as input and returns a reversed copy of the string, 
 using only string concatenation."""
 
+def reverseString(str):
+    #base case
+    if len(str)<0:
+        return ""
+    elif len(str)==1:
+        return str
+    else:
+        return str[-1]+reverseString(str[:-1])
+print(reverseString("dolphin"))
+
+"""6]Write a recursive function that determines whether a given integer n is a prime number by 
+checking for divisibility by integers less than n"""
 
 
-"""Solution Six"""
 
 
-"""Solution Seven"""
+
+"""7]Write a recursive function that takes in one argument n and computes Fn, the nth value of the 
+Fibonacci sequence. Recall that the Fibonacci sequence is defined by the relation Fn = Fn−1 + Fn−2 
+where F0 = 0 and F1 =1 """
 
