@@ -56,13 +56,13 @@ using only string concatenation."""
 
 def reverseString(str):
     #base case
-    if len(str)<0:
+    if len(str)==0:
         return ""
     elif len(str)==1:
         return str
     else:
         return str[-1]+reverseString(str[:-1])
-print(reverseString("dolphin"))
+print(reverseString("Travis"))
 
 """6]Write a recursive function that determines whether a given integer n is a prime number by 
 checking for divisibility by integers less than n"""
