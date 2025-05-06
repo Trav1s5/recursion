@@ -67,11 +67,43 @@ print(reverseString("dolphin"))
 """6]Write a recursive function that determines whether a given integer n is a prime number by 
 checking for divisibility by integers less than n"""
 
+def primenumber(n,divisor=None):
+    """recursively checks if the n is prime :boolean returns true if n is prime and false if not"""
+    #base case
+    if n<=1: # less than one not prime
+        return False
+    if n<=3:
+        return True #2 and 3
+    if n% 2==0:
+        return False #means  if n is divisible by 2
 
+    #initializing the divisor
+    if divisor is None:
+        divisor =3
+    if divisor* divisor>n:
+        return  True
+    if n % divisor==0:
+        return False
+
+    #recursive case
+    return primenumber(n,divisor+2)
+
+print(primenumber(2))
 
 
 
 """7]Write a recursive function that takes in one argument n and computes Fn, the nth value of the 
 Fibonacci sequence. Recall that the Fibonacci sequence is defined by the relation Fn = Fn−1 + Fn−2 
 where F0 = 0 and F1 =1 """
+
+def fibonacci(n):
+    #base cases
+    if n<=0:
+        return 0 #f0=0
+    if n==1:
+        return 1#f1=1
+    #recursive call
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)#fib formulae
+print(fibonacci(8))
 
