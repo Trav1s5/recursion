@@ -41,7 +41,7 @@ countdown(10)
 the previous countdown function. """
 
 def countup(n):
-    #base case stops when we reach 0
+    #base case
     if n<0:
        return None
     #recursive case
